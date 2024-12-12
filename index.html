@@ -3,27 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Básica</title>
+    <title>Amazon't</title>
     <link rel="stylesheet" href="./styles/style.css">
-    <script src="./scripts/script.js"></script>
 </head>
 <body>
-    <div class="contenedor">
+    <header>
+        <h1>Amazon't</h1>
+    </header>
 
-        <h1>Calculadora Básica</h1>
-        <form id="formularioCalculadora">
-            <input type="number" id="numero1" placeholder="Primer número" required>
-                <input type="number" id="numero2" placeholder="Segundo número" required>
-                <div class="botones">
-                    <button type="button" class="operacion" data-op="sumar">+</button>
-                    <button type="button" class="operacion" data-op="restar">−</button>
-                    <button type="button" class="operacion" data-op="multiplicar">×</button>
-                    <button type="button" class="operacion" data-op="dividir">÷</button>
-                    <button type="button" class="operacion" data-op="porcentaje">%</button>
-                </div>
-        </form>
-        <div id="resultado">Resultado: <span>0</span></div>
+    <main>
+        <section id="formulario">
+            <h2>Agregar videojuego</h2>
+            <form id="form-agregar">
+                <input type="text" id="titulo" placeholder="Título" required>
+                <input type="text" id="genero" placeholder="Género" required>
+                <input type="number" id="precio" placeholder="Precio" required>
+                <input type="text" id="plataforma" placeholder="Plataforma" required>
+                <button type="submit">Agregar</button>
+            </form>
+        </section>
 
-    </div>
+        <section id="biblioteca">
+            <h2>Biblioteca</h2>
+            <div id="filtros">
+                <input type="text" id="filtro-genero" placeholder="Filtrar por género">
+                <button id="btn-filtrar">Filtrar</button>
+                <button id="btn-restablecer">Restablecer</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Género</th>
+                        <th>Precio</th>
+                        <th>Plataforma</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-juegos">
+                </tbody>
+            </table>
+        </section>
+
+        <section id="resumen">
+            <h2>Resumen</h2>
+            <p>Total de Juegos: <span id="total-juegos">0</span></p>
+            <p>Valor Total: $<span id="valor-total">0</span></p>
+        </section>
+    </main>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>
